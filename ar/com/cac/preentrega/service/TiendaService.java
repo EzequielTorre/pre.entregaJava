@@ -19,8 +19,6 @@ public class TiendaService {
         this.pedidos = new ArrayList<Pedido>();
     }
 
-    // --- Gestión de Productos ---
-
     public void agregarProducto(Producto producto) {
         productos.add(producto);
     }
@@ -60,10 +58,7 @@ public class TiendaService {
         return false;
     }
 
-    // --- Gestión de Pedidos ---
-
     public Pedido crearPedido(List<LineaPedido> lineas) throws StockInsuficienteException {
-        // Validar stock antes de procesar
         for (LineaPedido linea : lineas) {
             Producto p = linea.getProducto();
             if (p.getStock() < linea.getCantidad()) {
@@ -72,7 +67,6 @@ public class TiendaService {
             }
         }
 
-        // Si hay stock suficiente, crear el pedido y actualizar stock
         Pedido nuevoPedido = new Pedido();
         for (LineaPedido linea : lineas) {
             Producto p = linea.getProducto();

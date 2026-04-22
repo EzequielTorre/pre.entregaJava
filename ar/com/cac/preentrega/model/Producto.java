@@ -14,7 +14,6 @@ public abstract class Producto {
         this.stock = stock;
     }
 
-    // Getters and Setters
     public int getId() {
         return id;
     }

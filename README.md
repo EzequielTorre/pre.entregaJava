@@ -1,6 +1,6 @@
 # 🛒 Proyecto: Sistema de Gestión de Tienda en Java
 
-¡Hola! 👋 Soy alumno del curso de Java y este es mi proyecto de pre-entrega. Aquí les cuento cómo armé esta aplicación para gestionar productos y pedidos, aplicando todo lo que vinimos viendo en las clases: Objetos, Colecciones, Excepciones y más.
+¡Hola! 👋 Soy alumno del curso de Java Talento Tech, y este es mi proyecto de pre-entrega. Aquí les cuento cómo armé esta aplicación para gestionar productos y pedidos, aplicando todo lo que vinimos viendo en las clases: Objetos, Colecciones, Excepciones y más.
 
 ## 🚀 ¿De qué trata el proyecto?:
 
@@ -57,4 +57,11 @@ Si querés probarlo, tenés que compilar todos los paquetes. Yo lo hago así des
 
 Este proyecto me sirvió para entender cómo interactúan las clases entre sí y la importancia de validar los datos que ingresa el usuario. Todavía hay cosas para mejorar.
 
+Profesor: Miguel Nefle
+
+Tutora: Natalia Themtham
+
+Alumno: Ezequiel Torres
+
+¡Gracias por revisar mi código!
 

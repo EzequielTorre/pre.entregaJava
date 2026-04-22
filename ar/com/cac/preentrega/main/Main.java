@@ -14,7 +14,6 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        // Precarga de algunos productos para facilitar la prueba
         service.agregarProducto(new ProductoPerecedero("Leche Entera", 1500.0, 50, 7));
         service.agregarProducto(new ProductoElectronico("Auriculares BT", 45000.0, 10, 12));
         service.agregarProducto(new ProductoPerecedero("Pan Artesanal", 1200.0, 20, 3));
@@ -183,7 +182,6 @@ public class Main {
         }
     }
 
-    // Métodos utilitarios para lectura segura
     private static int leerEntero(String mensaje) {
         while (true) {
             try {
