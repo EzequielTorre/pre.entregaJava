@@ -10,7 +10,7 @@ public class TestTienda {
     public static void main(String[] args) {
         TiendaService service = new TiendaService();
 
-        // 1. Agregar productos
+        // 1. Agregamos productos hardcodeados
         Producto p1 = new ProductoPerecedero("Leche", 100.0, 10, 5);
         Producto p2 = new ProductoElectronico("Mouse", 500.0, 5, 12);
         service.agregarProducto(p1);
@@ -19,7 +19,7 @@ public class TestTienda {
         System.out.println("--- Productos Iniciales ---");
         service.listarProductos().forEach(System.out::println);
 
-        // 2. Crear pedido exitoso
+        // 2. Crear pedido exitoso con productos existentes
         try {
             List<LineaPedido> lineas = new ArrayList<>();
             lineas.add(new LineaPedido(p1, 2));
@@ -27,8 +27,8 @@ public class TestTienda {
             Pedido ped = service.crearPedido(lineas);
             System.out.println("\n--- Pedido Creado ---");
             System.out.println(ped);
-            System.out.println("Nuevo stock Leche: " + p1.getStock()); // Debería ser 8
-            System.out.println("Nuevo stock Mouse: " + p2.getStock()); // Debería ser 4
+            System.out.println("Nuevo stock Leche: " + p1.getStock()); 
+            System.out.println("Nuevo stock Mouse: " + p2.getStock()); 
         } catch (StockInsuficienteException e) {
             System.out.println("ERROR: " + e.getMessage());
         }
@@ -37,7 +37,7 @@ public class TestTienda {
         try {
             System.out.println("\n--- Intentando pedido sin stock ---");
             List<LineaPedido> lineas = new ArrayList<>();
-            lineas.add(new LineaPedido(p2, 10)); // Solo hay 4
+            lineas.add(new LineaPedido(p2, 10)); 
             service.crearPedido(lineas);
         } catch (StockInsuficienteException e) {
             System.out.println("Capturada excepción esperada: " + e.getMessage());

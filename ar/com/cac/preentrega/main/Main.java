@@ -4,7 +4,6 @@ import ar.com.cac.preentrega.exception.ProductoNoEncontradoException;
 import ar.com.cac.preentrega.exception.StockInsuficienteException;
 import ar.com.cac.preentrega.model.*;
 import ar.com.cac.preentrega.service.TiendaService;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -21,7 +20,7 @@ public class Main {
         boolean salir = false;
         while (!salir) {
             mostrarMenu();
-            int opcion = leerEntero("Seleccione una opción: ");
+            int opcion = leerEntero("Seleccione una opcion: ");
 
             switch (opcion) {
                 case 1:
@@ -72,15 +71,18 @@ public class Main {
         double precio = leerDouble("Precio: ");
         int stock = leerEntero("Stock inicial: ");
 
-        if (tipo == 1) {
-            int dias = leerEntero("Días para vencer: ");
-            service.agregarProducto(new ProductoPerecedero(nombre, precio, stock, dias));
-        } else if (tipo == 2) {
-            int meses = leerEntero("Meses de garantía: ");
-            service.agregarProducto(new ProductoElectronico(nombre, precio, stock, meses));
-        } else {
-            System.out.println("Tipo inválido. No se agregó el producto.");
-            return;
+        switch (tipo) {
+            case 1:
+                int dias = leerEntero("Días para vencer: ");
+                service.agregarProducto(new ProductoPerecedero(nombre, precio, stock, dias));
+                break;
+            case 2:
+                int meses = leerEntero("Meses de garantía: ");
+                service.agregarProducto(new ProductoElectronico(nombre, precio, stock, meses));
+                break;
+            default:
+                System.out.println("Tipo inválido. No se agregó el producto.");
+                return;
         }
         System.out.println("Producto agregado con éxito.");
     }
