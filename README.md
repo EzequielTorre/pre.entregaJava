@@ -24,15 +24,26 @@ Para que el código no sea un lío, lo separé en paquetes. Aprendí que esto ay
 
 ## 🧠 Lógica y Desafíos:
 
-### 1. El uso de POO (Programación Orientada a Objetos):
+### 1. Pruebas Rápidas (Productos Hardcodeados):
+
+Para no tener que cargar productos a mano cada vez que probaba el programa, **hardcodeé** algunos artículos iniciales (como Leche, Auriculares y Pan) directamente en el código. Esto me salvó la vida para testear rápido si los descuentos de stock y los totales de los pedidos funcionaban bien sin perder tiempo en el menú de carga.
+
+### 2. Superando Obstáculos:
+
+Durante el desarrollo me choqué con varios problemas que me hicieron renegar un poco:
+
+- **El error de `Optional`**: Al principio usé una lógica más avanzada con `Streams` y `Optional` en la búsqueda, pero me tiraba errores de compatibilidad. Lo solucioné volviendo a lo básico: un bucle `for-each` y un `Iterator` para eliminar, lo que dejó el código mucho más estable.
+- **Limpieza de código**: Tenía el código lleno de comentarios que me servían de guía mientras aprendía, pero para la entrega final decidí borrarlos todos. Quería que el código hablara por sí solo y que se vea lo más "limpio" y profesional posible.
+
+### 3. El uso de POO (Programación Orientada a Objetos):
 
 Lo más interesante fue aplicar **Polimorfismo**. Por ejemplo, aunque tenga productos electrónicos o comida, todos heredan de `Producto`. Esto me permitió guardarlos a todos en una sola lista: `ArrayList<Producto>`.
 
-### 2. Gestión de Stock:
+### 4. Gestión de Stock:
 
 Cuando alguien arma un pedido, el sistema primero verifica si hay suficiente cantidad. Si no hay, lanza una `StockInsuficienteException`. Si todo está bien, descuenta automáticamente del stock. ¡Fue un desafío hacer que las cantidades coincidan!
 
-### 3. El Menú Interactivo:
+### 5. El Menú Interactivo:
 
 Quería que el usuario no rompiera el programa si ponía una letra en vez de un número. Por eso, usé `Scanner` dentro de bloques `try-catch` y métodos auxiliares para validar las entradas.
 
@@ -64,4 +75,3 @@ Tutora: Natalia Themtham
 Alumno: Ezequiel Torres
 
 ¡Gracias por revisar mi código!
-
