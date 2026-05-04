@@ -55,11 +55,11 @@ Si querés probarlo, tenés que compilar todos los paquetes. Yo lo hago así des
 
 1.  **Compilar:**
     ```bash
-    javac -d . ar/com/cac/preentrega/exception/*.java ar/com/cac/preentrega/model/*.java ar/com/cac/preentrega/service/*.java ar/com/cac/preentrega/main/*.java
+    "C:\Program Files\java\jdk-23\bin\javac.exe" -d . ar/com/cac/preentrega/exception/*.java ar/com/cac/preentrega/model/*.java ar/com/cac/preentrega/service/*.java ar/com/cac/preentrega/main/*.java
     ```
 2.  **Ejecutar:**
     ```bash
-    java ar.com.cac.preentrega.main.Main
+    "C:\Program Files\java\jdk-23\bin\java.exe" -cp . ar.com.cac.preentrega.main.Main
     ```
 
 ---
