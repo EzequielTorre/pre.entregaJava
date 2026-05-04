@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    private static TiendaService service = new TiendaService();
-    private static Scanner scanner = new Scanner(System.in);
+    private static final TiendaService service = new TiendaService();
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         service.agregarProducto(new ProductoPerecedero("Leche Entera", 1500.0, 50, 7));

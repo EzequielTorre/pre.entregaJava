@@ -10,7 +10,6 @@ public class TestTienda {
     public static void main(String[] args) {
         TiendaService service = new TiendaService();
 
-        // 1. Agregamos productos hardcodeados
         Producto p1 = new ProductoPerecedero("Leche", 100.0, 10, 5);
         Producto p2 = new ProductoElectronico("Mouse", 500.0, 5, 12);
         service.agregarProducto(p1);
@@ -19,7 +18,6 @@ public class TestTienda {
         System.out.println("--- Productos Iniciales ---");
         service.listarProductos().forEach(System.out::println);
 
-        // 2. Crear pedido exitoso con productos existentes
         try {
             List<LineaPedido> lineas = new ArrayList<>();
             lineas.add(new LineaPedido(p1, 2));
@@ -33,7 +31,6 @@ public class TestTienda {
             System.out.println("ERROR: " + e.getMessage());
         }
 
-        // 3. Crear pedido con stock insuficiente
         try {
             System.out.println("\n--- Intentando pedido sin stock ---");
             List<LineaPedido> lineas = new ArrayList<>();

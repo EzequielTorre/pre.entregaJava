@@ -5,18 +5,17 @@ import ar.com.cac.preentrega.exception.StockInsuficienteException;
 import ar.com.cac.preentrega.model.LineaPedido;
 import ar.com.cac.preentrega.model.Pedido;
 import ar.com.cac.preentrega.model.Producto;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class TiendaService {
-    private List<Producto> productos;
-    private List<Pedido> pedidos;
+    private final List<Producto> productos;
+    private final List<Pedido> pedidos;
 
     public TiendaService() {
-        this.productos = new ArrayList<Producto>();
-        this.pedidos = new ArrayList<Pedido>();
+        this.productos = new ArrayList<>();
+        this.pedidos = new ArrayList<>();
     }
 
     public void agregarProducto(Producto producto) {
@@ -24,7 +23,7 @@ public class TiendaService {
     }
 
     public List<Producto> listarProductos() {
-        return new ArrayList<Producto>(productos);
+        return new ArrayList<>(productos);
     }
 
     public Producto buscarProductoPorId(int id) throws ProductoNoEncontradoException {
@@ -37,7 +36,7 @@ public class TiendaService {
     }
 
     public List<Producto> buscarProductoPorNombre(String nombre) {
-        List<Producto> encontrados = new ArrayList<Producto>();
+        List<Producto> encontrados = new ArrayList<>();
         String nombreBuscado = nombre.toLowerCase();
         for (Producto p : productos) {
             if (p.getNombre().toLowerCase().contains(nombreBuscado)) {
@@ -79,6 +78,6 @@ public class TiendaService {
     }
 
     public List<Pedido> listarPedidos() {
-        return new ArrayList<Pedido>(pedidos);
+        return new ArrayList<>(pedidos);
     }
 }
