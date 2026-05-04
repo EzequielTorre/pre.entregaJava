@@ -4,7 +4,7 @@
 # Archivos de log
 *.log
 
-# Carpetas de IDEs (opcional pero recomendado)
+# Carpetas de IDEs 
 .project
 .classpath
 .settings/
