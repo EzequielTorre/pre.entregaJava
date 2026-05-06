@@ -16,6 +16,11 @@ public class Main {
         service.agregarProducto(new ProductoPerecedero("Leche Entera", 1500.0, 50, 7));
         service.agregarProducto(new ProductoElectronico("Auriculares BT", 45000.0, 10, 12));
         service.agregarProducto(new ProductoPerecedero("Pan Artesanal", 1200.0, 20, 3));
+        service.agregarProducto(new ProductoElectronico("Cargador USB-C", 25000.0, 15, 24));
+        service.agregarProducto(new ProductoPerecedero("Yogur Natural", 800.0, 30, 10));
+        service.agregarProducto(new ProductoElectronico("Smartwatch", 120000.0, 8, 18));
+        service.agregarProducto(new ProductoPerecedero("Huevos orgánicos", 6000.0, 40, 14));
+        service.agregarProducto(new ProductoElectronico("Mouse inalámbrico", 32000.0, 12, 18));
 
         boolean salir = false;
         while (!salir) {
